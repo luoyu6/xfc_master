@@ -1,0 +1,38 @@
+.ly_nav{
+	background: #fff;
+}
+.ly_ul li a{
+	display: inline-block;
+    height: 70px;
+    line-height: 36px;
+    font-size: 16px;
+}
+.ly_ul li:hover{
+	    background: #52B6EC;
+	    color: #fff;
+}
+.ly_ul li:hover a{
+	    
+	    color: #fff !important;
+}
+.ly_ul li i:hover{
+	    background: #52B6EC;
+	    color: #fff;
+}
+.navbar-brand1 {
+    float: left;
+    height: 50px;
+    /*padding: 15px 15px;*/
+    font-size: 18px;
+    line-height: 20px;
+}
+.navbar-default{
+	     border:none; 
+}
+.ly_active{
+	color: #fff;
+    background-color: #52B6EC;
+}
+.ly_active a{
+	color: #fff !important;
+}
