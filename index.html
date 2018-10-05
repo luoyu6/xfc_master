@@ -281,7 +281,7 @@
 			}
 		});
 
-		//显示二维码
+		/*//显示二维码
 		showImg()
 
 		function showImg() {
@@ -300,7 +300,7 @@
 				}
 				console.log(b);
 			});
-		}
+		}*/
 
 		var index = 0;
 		var nowdate = new Date();
@@ -313,7 +313,7 @@
 			}
 
 		})
-		//		autoplay();
+				autoplay();
 
 		function autoplay() {
 			timer = setInterval(function() {
@@ -324,7 +324,7 @@
 		$('.carousel').hover(function() {
 			clearInterval(timer);
 		}, function() {
-			//			autoplay();
+						autoplay();
 		})
 
 		function fn(i) {
