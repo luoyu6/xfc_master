@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
-		<title>成都小风车-by luoyu</title>
+		<title>成都小风车</title>
 	</head>
 
 	<body>
@@ -27,7 +27,7 @@
 					</div>
 					<!--小屏幕导航按钮和logo-->
 					<!--导航-->
-					<div  id="navbar" class="navbar-collapse collapse min_wid">
+					<div id="navbar" class="navbar-collapse collapse min_wid">
 						<ul class="nav navbar-nav navbar-right ly_ul ly_nav">
 							<li class="ly_active">
 								<a href="javascript:;" class="navItems" navTo="#"><i class="glyphicon glyphicon-home"></i> 网站首页
@@ -218,6 +218,22 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
+		/*//      绑定事件
+		        window.onhashchange=function(){
+		            var target = $(location.hash);
+		            console.log(target)
+		            if(target.length==1){
+		                 var top = target.offset().top-44;
+		                 if(top > 0){
+		                     $('html,body').animate({scrollTop:top}, 1000);
+		                 }
+		             } 
+		        }
+		//       触发事件 
+		        onhashchange();
+		*/
+
+		//点击导航之后隐藏
 		$(window).scroll(function() {
 			//小屏幕下的导航条折叠
 			if($(window).width() < 768) {
@@ -249,7 +265,6 @@
 			if(navto != "#") {
 				var $div = $('#' + navto);
 				var top = $div.offset().top || 0;
-				//				console.log(top);
 				$('html,body').animate({
 					'scroll-top': top - 70
 				}, 500);
@@ -302,7 +317,8 @@
 			});
 		}*/
 
-		var index = 0;
+$(function(){
+	var index = 0;
 		var nowdate = new Date();
 		var timer;
 		$('.ly_btn i').click(function() {
@@ -313,7 +329,7 @@
 			}
 
 		})
-				autoplay();
+		autoplay();
 
 		function autoplay() {
 			timer = setInterval(function() {
@@ -324,7 +340,7 @@
 		$('.carousel').hover(function() {
 			clearInterval(timer);
 		}, function() {
-						autoplay();
+			autoplay();
 		})
 
 		function fn(i) {
@@ -341,6 +357,7 @@
 
 			$('.item_ban').eq(index).fadeIn().siblings().fadeOut();
 		}
+});
 	</script>
 
 </html>
