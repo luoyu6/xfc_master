@@ -243,13 +243,18 @@
 	overflow: hidden;
 }
 
-.ly_pad {
+
+/*.ly_pad {
 	padding-top: 179px;
 	position: relative;
-}
-.po {
+}*/
 
-	}
+.item_ban {
+    position: absolute;
+    left: 50%;
+    margin-left: -392px;
+}
+
 @media only screen and (min-width: 768px) {
 	.po {
 		margin-top: -50px;
@@ -272,6 +277,7 @@
 	overflow: hidden;
 	color: #fff;
 	text-align: center;
+	position: relative;
 }
 
 @media only screen and (max-width:768px) {
@@ -373,7 +379,8 @@
 @media only screen and (max-width:768px) {}
 
 .ly_pad {
-	padding: 52px 0;
+    padding: 52px 0;
+    position: relative;
 }
 
 .aboutus span {
@@ -412,7 +419,7 @@ footer {
 }
 
 .no {
-	display: none;
+	/*display: none;*/
 }
 
 .prev {
