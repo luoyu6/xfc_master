@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="luoyu" />
+		<meta name="keywords" content="移动端boostrap项目  boostrap项目  boostrap框架  jQuery项目  js项目    ajax异步，跨域，HTML5,css3" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -219,19 +220,19 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		/*//      绑定事件
-		        window.onhashchange=function(){
-		            var target = $(location.hash);
-		            console.log(target)
-		            if(target.length==1){
-		                 var top = target.offset().top-44;
-		                 if(top > 0){
-		                     $('html,body').animate({scrollTop:top}, 1000);
-		                 }
-		             } 
-		        }
-		//       触发事件 
-		        onhashchange();
-		*/
+						        window.onhashchange=function(){
+						            var target = $(location.hash);
+						            console.log(target)
+						            if(target.length==1){
+						                 var top = target.offset().top-44;
+						                 if(top > 0){
+						                     $('html,body').animate({scrollTop:top}, 1000);
+						                 }
+						             } 
+						        }
+						//       触发事件 
+						        onhashchange();
+						*/
 
 		//点击导航之后隐藏
 		$(window).scroll(function() {
@@ -317,47 +318,47 @@
 			});
 		}*/
 
-$(function(){
-	var index = 0;
-		var nowdate = new Date();
-		var timer;
-		$('.ly_btn i').click(function() {
-			var _index = $(this).index();
-			if(new Date() - nowdate > 350) {
-				nowdate = new Date();
-				fn(_index);
-			}
+		$(function() {
+			var index = 0;
+			var nowdate = new Date();
+			var timer;
+			$('.ly_btn i').click(function() {
+				var _index = $(this).index();
+				if(new Date() - nowdate > 350) {
+					nowdate = new Date();
+					fn(_index);
+				}
 
-		})
-		autoplay();
-
-		function autoplay() {
-			timer = setInterval(function() {
-				fn(1);
-			}, 1000);
-		}
-
-		$('.carousel').hover(function() {
-			clearInterval(timer);
-		}, function() {
+			})
 			autoplay();
-		})
 
-		function fn(i) {
-
-			if(i) {
-				index++;
-				if(index > $('.item_ban').length - 1) index = 0;
-			} else {
-				index--;
-				if(index < 0) index = $('.item_ban').length - 1;
-
+			function autoplay() {
+				timer = setInterval(function() {
+					fn(1);
+				}, 1000);
 			}
-			console.log(index);
 
-			$('.item_ban').eq(index).fadeIn().siblings().fadeOut();
-		}
-});
+			$('.carousel').hover(function() {
+				clearInterval(timer);
+			}, function() {
+				autoplay();
+			})
+
+			function fn(i) {
+
+				if(i) {
+					index++;
+					if(index > $('.item_ban').length - 1) index = 0;
+				} else {
+					index--;
+					if(index < 0) index = $('.item_ban').length - 1;
+
+				}
+				console.log(index);
+
+				$('.item_ban').eq(index).fadeIn().siblings().fadeOut();
+			}
+		});
 	</script>
 
 </html>
