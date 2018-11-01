@@ -250,9 +250,9 @@
 }*/
 
 .item_ban {
-    position: absolute;
-    left: 50%;
-    margin-left: -392px;
+	position: absolute;
+	left: 50%;
+	margin-left: -392px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -263,8 +263,10 @@
 
 @media only screen and (max-width: 768px) {
 	.po {
-		font-size: 30px;
+		font-size: 22px;
 		margin-top: -103px;
+		margin-left: 204px;
+		padding: 0 15px;
 	}
 }
 
@@ -326,6 +328,13 @@
 	right: 0;
 }
 
+.nav_imgbox.po {
+	position: absolute;
+	display: block;
+	right: 0;
+	top: 121px;
+}
+
 .no {
 	display: none;
 }
@@ -379,8 +388,8 @@
 @media only screen and (max-width:768px) {}
 
 .ly_pad {
-    padding: 52px 0;
-    position: relative;
+	padding: 52px 0;
+	position: relative;
 }
 
 .aboutus span {

@@ -4,10 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="author" content="luoyu" />
-		<meta name="keywords" content="移动端boostrap项目  boostrap项目  boostrap框架  jQuery项目  js项目    ajax异步，跨域，HTML5,css3" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/x-icon" href="img/0.png">
-		
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/default.css" />
@@ -183,7 +180,6 @@
 					</ul>
 				</div>
 			</div>
-
 		</div>
 		<div class="aboutus" id="aboutus">
 			<div class="container text-center">
@@ -222,19 +218,19 @@
 	<script src="js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		/*//      绑定事件
-						        window.onhashchange=function(){
-						            var target = $(location.hash);
-						            console.log(target)
-						            if(target.length==1){
-						                 var top = target.offset().top-44;
-						                 if(top > 0){
-						                     $('html,body').animate({scrollTop:top}, 1000);
-						                 }
-						             } 
-						        }
-						//       触发事件 
-						        onhashchange();
-						*/
+								        window.onhashchange=function(){
+								            var target = $(location.hash);
+								            console.log(target)
+								            if(target.length==1){
+								                 var top = target.offset().top-44;
+								                 if(top > 0){
+								                     $('html,body').animate({scrollTop:top}, 1000);
+								                 }
+								             } 
+								        }
+								//       触发事件 
+								        onhashchange();
+								*/
 
 		//点击导航之后隐藏
 		$(window).scroll(function() {
@@ -250,7 +246,7 @@
 				});
 			}
 		});
-
+		//点击锚链接，页面跳转到相应的部分
 		/*$(".navItems").click(function(){
 			var _this = $(this);
 			var scrollTo = _this.attr("navTo");
@@ -281,12 +277,11 @@
 		});
 
 		//显示二维码
-		$('.ly_nav li').click(function() {
+		/*$('.ly_nav li').click(function() {
 
 			for(var i = 0; i < $('.ly_nav li').length; i++) {
 
 				$('.ly_nav li').eq(i).click(function() {
-					//					$(this).find('.nav_imgbox').addClass('llll').parent('li').siblings().find('.nav_imgbox').removeClass('llll');
 					$(this).find('.nav_imgbox').css({
 						'position': 'absolute',
 						'display': 'block',
@@ -295,30 +290,24 @@
 						'display': 'none'
 					});
 
-				})
+				});
 			}
-		});
+		});*/
 
-		/*//显示二维码
-		showImg()
+		$('.ly_nav li').click(function() {
+			var sel =$(this).hasClass('sel');
+			var index=$(this).index();
+			if(sel){
+				$(this).removeClass('sel');
+				$(this).find('.nav_imgbox').removeClass('po');
+			}else{
+				$(this).addClass('sel');
+				$(this).find('.nav_imgbox').addClass('po');
+				
+			}
+		})
 
-		function showImg() {
-			var b = false;
-			$('.showimg').click(function() {
-				if(!b) {
-					$('.nav_imgbox').addClass('img_show').removeClass('no');
-
-					b = true;
-
-				} else {
-					$('.nav_imgbox').removeClass('img_show').addClass('no');
-
-					b = false;
-
-				}
-				console.log(b);
-			});
-		}*/
+		//显示二维码
 
 		$(function() {
 			var index = 0;
